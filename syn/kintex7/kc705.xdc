@@ -3,6 +3,10 @@
 # PadFunction: IO_L12P_T1_MRCC_33
 set_property IOSTANDARD DIFF_SSTL15 [get_ports clk200_p]
 
+set_property PACKAGE_PIN L25 [get_ports clk_160_p_o]
+set_property IOSTANDARD LVCMOS25 [get_ports clk_160_p_o]
+set_property DIFF_TERM TRUE [get_ports clk_160_p_o]
+
 # PadFunction: IO_L12N_T1_MRCC_33
 set_property IOSTANDARD DIFF_SSTL15 [get_ports clk200_n]
 set_property PACKAGE_PIN AD12 [get_ports clk200_p]

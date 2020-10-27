@@ -128,6 +128,7 @@ entity app is
            fe_cmd_n        : out std_logic_vector(c_TX_CHANNELS-1 downto 0);
            fe_data_p        : in  std_logic_vector((c_RX_CHANNELS*c_RX_NUM_LANES)-1 downto 0);
            fe_data_n        : in  std_logic_vector((c_RX_CHANNELS*c_RX_NUM_LANES)-1 downto 0);
+           clk_160_p_o      : out std_logic;
            -- I2c
            sda_io                : inout std_logic;
            scl_io                    : inout std_logic;
@@ -472,6 +473,7 @@ begin
     clk_160_n_s <= not clk_160_s;
     
     fe_cmd_n_o <= not fe_cmd_o;
+    clk_160_p_o <= clk_160_s;
 		
     -- Activate LVDS buffer		
     pwdn_l <= (others => '1');
